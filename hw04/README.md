@@ -5,12 +5,17 @@ In this lab, we will look at the processing of the MNIST data set using ConvnetJ
 
 - Name all the layers in the network, make sure you understand what they do.
 
-**Layer 1:** Input Layer -  
-**Layer 2:** Convolutional Layer -  
-**Layer 3:** Pooling Layer -  
-**Layer 4:** Convolutional Layer -  
-**Layer 5:** Pooling Layer -  
-**Layer 6:** Loss Layer - In softmax, the outputs are probabilities that sum to 1. 
+**Layer 1:** Input Layer - The first layer of a neural network, the input layer declares the size of the input volume. In this case, the input volumes are images of 24x24x1 dimensions, corresponding to the out_sx, out_sy, and out_depth parameters respectively.
+
+**Layer 2:** 1st Convolutional Layer - Convolutional layers map the features of an input image using a specified filter size (sx:5); number of filters (filters:8); amount by which the filter is applied to the input (stride:1); and padding to maintain spacial dimensions (pad:2). This layer also applies an nonlinear activation layer (in this case, ReLU) to avoid the vanishing gradient problem which can affect training of the model.
+
+**Layer 3:** 1st Pooling Layer - The pooling layer generally follows the nonlinear activation layer. It down samples the feature maps output by the convolutional layers by taking either an average or a max of a grouping of features defined by size (sx) and stride (stride) parameters. to highlight the most important features. This has the effect of highlighting the most important features, thus reducing the feature space and making it more computationally effecient, and helping control for overfitting. In the given example, this layer also applies size (sx:2) and stride (stride:2) parameters.
+
+**Layer 4:** 2nd Convolutional Layer - This layer performs the same general functionality as the first convolutional layer instance but, in this case, increases the number of filters to 16.
+
+**Layer 5:** 2nd Pooling Layer - This layer performs the same general functionality as the first pooling layer instance but, in this case, increases the size and stride of the pooling "filter" to 3.
+
+**Layer 6:** Loss Layer - The last layer of a neural network, the loss layer outputs probabilities that sum to 1 for a defined number of classes (num_classes). 
 
 - Experiment with the number and size of filters in each layer. Does it improve the accuracy?
 
