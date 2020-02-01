@@ -5,19 +5,27 @@ In this lab, we will look at the processing of the MNIST data set using ConvnetJ
 
 - Name all the layers in the network, make sure you understand what they do.
 
-Layer 1: Input Layer - 
-Layer 2: Convolutional Layer - 
-Layer 3: Pooling Layer - 
-Layer 4: Convolutional Layer - 
-Layer 5: Pooling Layer - 
-Layer 6: Loss Layer - In softmax, the outputs are probabilities that sum to 1.
+**Layer 1:** Input Layer -  
+**Layer 2:** Convolutional Layer -  
+**Layer 3:** Pooling Layer -  
+**Layer 4:** Convolutional Layer -  
+**Layer 5:** Pooling Layer -  
+**Layer 6:** Loss Layer - In softmax, the outputs are probabilities that sum to 1. 
 
 - Experiment with the number and size of filters in each layer. Does it improve the accuracy?
 
+
+
 - Remove the pooling layers. Does it impact the accuracy?
+
+
 
 - Add one more conv layer. Does it help with accuracy?
 
+
+
 - Increase the batch size. What impact does it have?
+
+
 
 - What is the best accuracy you can achieve? Are you over 99%? 99.5%
