@@ -35,4 +35,4 @@ Doubling the batch size seems to marginally improve the classification accuracie
 
 - What is the best accuracy you can achieve? Are you over 99%? 99.5%
 
-I was able to get different models to oscilate between 0.99 and 1.00 for periods of time, particularly the longer the model was running. But none of them stayed in that range consistently over time.
+I was able to get different models to oscilate between 0.99 and 1.00 for periods of time, particularly the longer the model was running. But none of them seemed to stay in that range consistently over time.
