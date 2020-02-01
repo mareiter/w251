@@ -19,18 +19,20 @@ In this lab, we will look at the processing of the MNIST data set using ConvnetJ
 
 - Experiment with the number and size of filters in each layer. Does it improve the accuracy?
 
-
+The initial model yields relatively good training and validation accuracies to begin with, at 0.96-0.99 training accuracy and 0.94-0.98 validation accuracy. After doubling the size and number of filters in each of the convolutional layers, the model seems to yield marginally better and more consistent accuracies overall, up to 0.02 points higher for each. The improvement is more noticeable in the validation accuracy, however, the model evaluates slower with nearly double the forward and backprop times per example.
 
 - Remove the pooling layers. Does it impact the accuracy?
 
-
+Removing the pooling layers seems to have a greater impact on the validation accuracy than the training accuracy, yielding a validation accuracy of 0.03 to 0.04 points lower than the initial model.
 
 - Add one more conv layer. Does it help with accuracy?
 
-
+Adding a convolutional layer to the model does not appear to improve the accuracy of the model, sending the validation accuracy to the low 0.90s. It also seems to widen the gap between the training accuracy and validation accuracy.
 
 - Increase the batch size. What impact does it have?
 
-
+Doubling the batch size seems to marginally improve the classification accuracies, while not negatively impacting the execution times as the other adjustments did. Increasing the batch size significantly seems to cause more volatility in the loss as the model attempts to converge.
 
 - What is the best accuracy you can achieve? Are you over 99%? 99.5%
+
+The 
