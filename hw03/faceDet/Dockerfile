@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM w251/cuda:dev-tx2-4.3_b132
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -12,13 +12,12 @@ RUN apt-get install -y python3-opencv \
                        mosquitto-clients
 
 # Install paho mqtt to send messages to broker
-RUN pip3 install paho-mqtt numpy
+RUN pip3 install numpy \ 
+		 paho-mqtt
 
 RUN mkdir app
 COPY . /app
 WORKDIR /app
-#RUN pip3 install -r requirements.txt
 
 ENTRYPOINT [ "python3" ]
 CMD ["run.py" ]
-
