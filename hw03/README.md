@@ -8,7 +8,20 @@ Per the instructions of the assignment, I created an internet of things applicat
 
 ```docker run --name faceDet --device /dev/video0 --network hw03 hw03-facedet```
 
-2. The second container, mqttLocBrk is a based on a lightweight alpine image and serves to simply launch and run the mosquitto broker.
+2. The second container, mqttLocBrk, is a based on a lightweight alpine image and serves to simply launch and run the mosquitto broker.
+
+```docker run --name mqttLocBrk --network hw03 hw03-mqttlocbrk```
+
 3. The third container, mqttLocFor, subscribes to the local broker to receive the facial images generated in the first container and subsequently forward them to the cloud.
+
+```docker run --name mqttLocFor --network hw03 hw03-mqttLocFor```
+
 4. The fourth container, mqttCldBrk, is identical to the second container running a basic alpine image to run the cloud-based mosquitto broker.
+
+```docker run --name mqttCldBrk --network hw03 hw03-mqttcldbrk```
+
 5. The fifth and final container, imgProc, subscribes to the cloud-based mosquitto broker and writes the messages received (images) to a local directory. When launching this container it is necessary to define a volume for saving the image files which essentially links a directory in the container with a directory in the virtual machine. Note that a cloud-based block storage account was created and linked to the same directory in the virtual machine in advance, applying s3cmd.
+
+```docker run --name imgProc --volume "/mnt/mareiter-hw03:/mnt/mareiter-hw03" --network hw03 hw03-imgproc```
+
+In terms of the topics chosen. 
