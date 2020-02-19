@@ -6,7 +6,7 @@ Per the instructions of the assignment, I created an internet of things applicat
 
 1. The first container, faceDet, runs the python package cv2 to connect to the USB camera, detect the coordinates of a face, and publish an encoded image to a local mosquitto broker. When running this container it  necessary to add necessary to grant the container access to the camera (/dev/video0). Note: Despite the instructions indicating that video0 is reserved for the built-in camera, in my configuration video0 indeed points to the USB camera.
 
-docker run --name faceDet --device /dev/video0 --network hw03 hw03-facedet
+```docker run --name faceDet --device /dev/video0 --network hw03 hw03-facedet```
 
 2. The second container, mqttLocBrk is a based on a lightweight alpine image and serves to simply launch and run the mosquitto broker.
 3. The third container, mqttLocFor, subscribes to the local broker to receive the facial images generated in the first container and subsequently forward them to the cloud.
