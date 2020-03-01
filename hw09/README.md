@@ -1,4 +1,4 @@
 # Homework 9: Distributed Training and Neural Machine Translation
 
 ## Validation BLEU Curve
-![Validation BLEU curve](Eval_BLEU_Score_50k.png)
+!Eval_BLEU_Score_50k.png
