@@ -4,7 +4,7 @@
 
 Please submit the nohup.out file along with screenshots of your Tensorboard indicating training progress (Blue score, eval loss) over time.  Also, answer the following (simple) questions:
 * How long does it take to complete the training run? (hint: this session is on distributed training, so it *will* take a while)
-
+I ran the training set on 50,000 steps, which took a total of 10h 39m 21s to run.
 
 * Do you think your model is fully trained? How can you tell?
 
@@ -22,19 +22,21 @@ Please submit the nohup.out file along with screenshots of your Tensorboard indi
 
 
 * How big was your training set (mb)? How many training lines did it contain?
-
+The training "set" consisted of a number of different files (train, train.clean, train.clean.shuffled) for each language at varying sizes. Examples include: train.en (607 MB), train.de (678 MB), train.clean.en (593 MB), and train.clean.de (664 MB). There is also a file with both languages called train.clean.en-de.shuffled.common. It is the largest training file at 1.3 GB. The train.en and train.de files each contained 4,562,102 lines.
 
 * What are the files that a TF checkpoint is comprised of?
-
+A TF checkpoint is comprised of three files: a .data file, a .index file, and a .meta file. The .data file stores the values of each variable, the .index file identifies the checkpoint, and the .meta file stores the graph structure.
 
 * How big is your resulting model checkpoint (mb)?
-
+My resulting model checkpoint is 852.3 MB.
 
 * Remember the definition of a "step". How long did an average step take?
-
+The total training time was 10h 39m, or 639 minutes. Given that there were a total of 50,000 steps, that equates to 0.767 seconds per step.
 
 * How does that correlate with the observed network utilization between nodes?
-
+The higher the network utilization, the lower the average step time.
 
 ### Validation BLEU Curve
 ![Validation BLEU Curve](Eval_BLEU_Score_50k.png)
+
+### 
