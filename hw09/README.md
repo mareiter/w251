@@ -10,17 +10,22 @@ I ran the training set on 50,000 steps, which took a total of 10h 39m 21s to run
 * Do you think your model is fully trained? How can you tell?
 
 
+
 * Were you overfitting?
+
 
 
 * Were your GPUs fully utilized?
 
 
+
 * Did you monitor network traffic (hint:  ```apt install nmon ```) ? Was network the bottleneck?
+
 
 
 * Take a look at the plot of the learning rate and then check the config file.  Can you explan this setting?
 
+The plot of the learning rate increases linearly up until 8,000 steps before decreasing. In the config file there is a learning rate policy parameter called warmup_steps, which is set to 8,000. This parameter essentially waits to initialize the learning rate once the steps hit 8,000. The logic is that since the initial set of parameters in the model is random, and 
 
 * How big was your training set (mb)? How many training lines did it contain?
 
@@ -36,7 +41,7 @@ My resulting model checkpoint is 852.3 MB.
 
 * Remember the definition of a "step". How long did an average step take?
 
-The total training time was 10h 39m, or 639 minutes. Given that there were a total of 50,000 steps, that equates to 0.767 seconds per step.
+The total training time was 10h 39m, or 639 minutes. Given that there were a total of 50,000 steps, that equates to 0.767 seconds per step. The number of objects per second averaged 81,363.
 
 * How does that correlate with the observed network utilization between nodes?
 
