@@ -17,11 +17,11 @@ It seems that 50,000 steps was an adequate number for training. While the valida
 
 * Were your GPUs fully utilized?
 
-
+In line with the subsequent question, I do not have the specific results of GPU utilization. However, 
 
 * Did you monitor network traffic (hint:  ```apt install nmon ```) ? Was network the bottleneck?
 
-Unfortunately, I was not able to monitor the network traffic during the implementation. Through further research, however, the network is indeed a common performance bottleneck in a distributed training process of this type. 
+Unfortunately, I was not able to monitor the network traffic during the implementation. Through further research, however, network is indeed a common performance bottleneck in a distributed training process of this type. To address this bottleneck, network resources can be upgraded in the virtual machines to fully utilize GPUs.
 
 * Take a look at the plot of the learning rate and then check the config file.  Can you explan this setting?
 
