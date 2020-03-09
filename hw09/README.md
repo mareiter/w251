@@ -55,3 +55,6 @@ The higher the network utilization, the lower the average step time.
 
 ### Learning Rate
 ![Learning Rate](learning_rate_50k.png)
+
+### Loss Optimization
+![Loss Optimization](Loss_Optimization_50k.png)
