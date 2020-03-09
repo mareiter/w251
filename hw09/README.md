@@ -50,4 +50,5 @@ The higher the network utilization, the lower the average step time.
 ### Validation BLEU Curve
 ![Validation BLEU Curve](Eval_BLEU_Score_50k.png)
 
-### 
+### Evaluation Loss
+![Evaluation Loss](eval_loss_50k.png)
