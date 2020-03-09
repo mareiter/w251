@@ -13,7 +13,7 @@ Yes, the model seems to be fully trained, or at least close, as the evaluation l
 
 * Were you overfitting?
 
-It seems that 50,000 steps was an adequate number for training. While the validation metrics such as BLEU Score and Evaluation Loss have begun to level off, they still improving and has not shown 
+It seems that 50,000 steps was an adequate number for training. While the validation metrics such as BLEU Score and Evaluation Loss have begun to level off, they still improving and have not shown signs of reversing yet which would be a sign of overfitting.
 
 * Were your GPUs fully utilized?
 
