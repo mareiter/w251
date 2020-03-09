@@ -13,7 +13,7 @@ Yes, the model seems to be fully trained, or at least close, as the evaluation l
 
 * Were you overfitting?
 
-
+It seems that 50,000 steps was an adequate number for training. While 
 
 * Were your GPUs fully utilized?
 
@@ -21,7 +21,7 @@ Yes, the model seems to be fully trained, or at least close, as the evaluation l
 
 * Did you monitor network traffic (hint:  ```apt install nmon ```) ? Was network the bottleneck?
 
-
+Unfortunately, I was not able to monitor the network traffic during the implementation. Through further research, however, the network is indeed a common performance bottleneck in a distributed training process of this type. 
 
 * Take a look at the plot of the learning rate and then check the config file.  Can you explan this setting?
 
