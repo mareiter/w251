@@ -9,7 +9,7 @@ I ran the training set on 50,000 steps, which took a total of 10h 39m 21s to run
 
 * Do you think your model is fully trained? How can you tell?
 
-
+Yes, the model seems to be fully trained, or at least close, as the evaluation loss graph has leveled off at ???. This indicates that additional training will likely not reduce loss more significantly.
 
 * Were you overfitting?
 
