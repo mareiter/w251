@@ -17,7 +17,7 @@ It seems that 50,000 steps was an adequate number for training. While the valida
 
 * Were your GPUs fully utilized?
 
-In line with the subsequent question, I do not have the specific results of GPU utilization. However, 
+I do not have the specific results of GPU utilization. However, in line with the subsequent question, the GPUs were likely being underutilized due to a network bottleneck.
 
 * Did you monitor network traffic (hint:  ```apt install nmon ```) ? Was network the bottleneck?
 
@@ -25,7 +25,7 @@ Unfortunately, I was not able to monitor the network traffic during the implemen
 
 * Take a look at the plot of the learning rate and then check the config file.  Can you explan this setting?
 
-The plot of the learning rate increases linearly up until 8,000 steps before decreasing. In the config file there is a learning rate policy parameter called warmup_steps, which is set to 8,000. This parameter essentially waits to initialize the learning rate once the steps hit 8,000. The logic is that since the initial set of parameters in the model is random, and 
+The plot of the learning rate increases linearly up until 8,000 steps before decreasing. In the config file there is a learning rate policy parameter called warmup_steps, which is set to 8,000. This parameter essentially waits to initialize the learning rate once the steps hit 8,000. The logic is that since the initial set of parameters in the model is random, we need to keep the model from being too susceptible to high variations early on in the training process.
 
 * How big was your training set (mb)? How many training lines did it contain?
 
