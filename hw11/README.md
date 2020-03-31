@@ -14,7 +14,7 @@ Note: Running the docker build and docker run scripts provided executes properly
 
 ## Configuration 2
 
-After conducting some research, for the second configuration I chose to apply Nadam as the optimizer as a variation of adam. Nadam applies a Nesterov momentum term to adjust the learning rates in the stochastic gradient descent (SGD) model (https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c).
+After conducting some research, for the second configuration I chose to apply Nadam as the optimizer as a variation of adam. Nadam applies a Nesterov momentum term to the stochastic gradient descent (SGD) model. The result is a more 'efficient' adjustment to the learning rate that has shown to be more accurate than Adam alone (https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c). Interestingly, this model seemed to improve upon Configuration 1 in terms of loss, however it did not result in more successful landings overall with just 46.
 
 At step  50000  
 reward:  -3.9854708528737985  
