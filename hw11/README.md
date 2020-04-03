@@ -24,3 +24,8 @@ Total successes are:  46
 
 ## Configuration 3
 
+## Cloud Object Storage
+
+https://s3.us-south.cloud-object-storage.appdomain.cloud/mareiter-cos-hw11/frame48000.mp4
+https://s3.us-south.cloud-object-storage.appdomain.cloud/mareiter-cos-hw11/frame49000.mp4
+https://s3.us-south.cloud-object-storage.appdomain.cloud/mareiter-cos-hw11/frame50000.mp4
