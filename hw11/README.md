@@ -29,7 +29,7 @@ Total successes are:  46
 
 ## Configuration 4
 
-For the fourth and final attempt, I decided to increase to 75,000 iterations implementing adamax for the optimizer.
+For the fourth and final attempt, I decided to increase to 75,000 iterations again implementing adamax for the optimizer. I also reduced the tarining threshold to 1,500 to evaluate the effect. To compensate for the expected drastic increase in evaluation time, I also reduced the batch size to 10. However, after nearly 24 hours, I stopped the modelat 65,000 steps with just 47 successful landings.
 
 At step 65000  
 loss: 137.7095  
@@ -38,7 +38,7 @@ Total successes are:  47
 
 ## Conclusions
 
-Due to time limitations in running the model, I was not able to attempt a wider variety of configurations, especially given the number of parameters and potential adjustments. However, I would have explored more combinations of loss, metrics, and the number of layers.
+Due to time limitations in running the model, I was not able to attempt a wider variety of configurations, especially given the number of parameters and potential adjustments. The adjustments I chose did not improve the model, with the most effective of the configurations being the base configuration. This tells me that I probably should have explored other configurations of loss, metrics, and the number of layers.
 
 ## Cloud Object Storage
 
