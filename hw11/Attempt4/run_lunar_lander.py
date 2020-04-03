@@ -29,8 +29,8 @@ if __name__=="__main__":
     model = nnmodel(10)
     tr = 0
     prev_r = 0
-    training_thr = 5000
-    total_itrs = 25000
+    training_thr = 1500
+    total_itrs = 75000
     successful_steps = []
 
     while steps <= total_itrs:
@@ -44,7 +44,7 @@ if __name__=="__main__":
             # re-train a model
             print("training model model")
             modelTrained = True
-            model.fit(np.array(X_train),np.array(y_train).reshape(len(y_train),1), epochs = 10, batch_size=30)
+            model.fit(np.array(X_train),np.array(y_train).reshape(len(y_train),1), epochs = 10, batch_size=10)
 
         if modelTrained:
             maxr = -1000
